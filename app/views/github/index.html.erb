@@ -1,0 +1,8 @@
+<h1>Urban</h1>
+<%= form_tag "/", method: :get %>
+<%= text_field_tag :word %>
+<%= submit_tag "Define" %>
+<dl>
+  <%= "Your word is #{@word}:" %>
+  <%= @res["list"][0]["definition"] %>
+</dl>
